@@ -1,0 +1,128 @@
+USER MANUAL
+
+Play Solitaire (Patience) game in the command prompt!
+
+[To Open the Program]
+1.) Open the Command Prompt.
+2.) Go to the directory of the package of the program's java files.
+3.) Input javac -d . *.java
+4.) From here you have two options : 
+-Input java GAME.Main (If you want to play with the GUI interface)
+-Input java GAME.Main -no-gui (if you want to play in the terminal)
+or
+1.)Open the jar executable file of the program.
+
+HOW TO PLAY THE GAME[Terminal mode]
+>The program will prompt for an action from the 10 specific actions allowed in this program.
+The input will VALIDATED and will be done on the keyboard. The game state will be shown 
+every action made and the game status will also be stated which will be found on the top-most
+part of the game screen. 
+
+CHOICES:
+1.) How to Deal/Redeal.
+-Input "1" in the command prompt.
+
+2.) How to Draw from the Stock pile. 
+-Input "2" in the command prompt.
+
+3.) How to Move a Card from the Talon pile to the Foundation pile.
+-Input "3" in the command prompt.
+-The move will be validated before moving the card.
+
+4.) How to Move a Card from the Tableau pile to the Foundation pile.
+-Input "4" in the command prompt.
+-The program will prompt for the column number of the pile of the card that is supposed to be moved.
+-The move will be validated before moving the card.
+
+5.) How to Move a Card/s within the Tableau.
+-Input "5" in the command prompt.
+-The program will prompt for :
+	>the column number of the pile of the card that is supposed to be moved
+	>the number of cards to be transferred (from the open bottom card)
+	>the column number of the pile where the card/s will be transferred 
+-The move will be validated before moving the card. 
+
+6.) How to Move a Card from the Talon pile to the Tableau pile.
+-Input "6" in the command prompt.
+-The program will prompt for the column number of the pile where the card will be transferred. 
+-The move will be validated before moving the card.
+
+7.) How to Move a Card from the Foundation pile to the Tableau pile.
+-Input "7" in the command prompt.
+-The program will prompt for the suit of the card (from the foundation pile) to be transferred. 
+-Input "1" for Diamonds, "2" for Hearts, "3" for Spades, "4" for Clubs. (with input validation)
+-The move will be validated before moving the card.
+
+8.) How to Save the Game State.
+-Input "8" in the command prompt.
+-Saved game states will be shown first.
+-Then, the program will prompt for the filename of the game state. (Not case sensitive)
+-There are only 5 slots available.
+
+9.) How to Save the Game State.
+-Input "9" in the command prompt.
+-Saved game states will be shown first.
+-Then, the program will prompt for the filename of the game state. (Not case sensitive)
+-The filename that can be loaded must be one of the available game states.
+
+10.) How to Close the program.
+-Input "10" in the command prompt.
+
+Additional Notes :
+Reminders:
+-Input data only when prompted.
+How to remove game states :
+-Delete the text file of your desired file while the program is not running.
+
+Game structure:
+
+[   ] (Stock pile)		[ D ]   [ H ]   [ S ]   [ C ] Foundations 
+
+[3RD][2ND][TOP] (Talon pile, top card to the last card, from right to left) 
+
+[1ST]   [2ND]   [3RD]   [4TH]   [5TH]   [6TH]   [7TH] (Tableau)
+
+Card structure :
+[===] - Means the card is faced down
+[1 (suit)] - "1" is the rank of the card (1 to K)
+	  - suit is the printed form of the suit of a card (Diamonds, Hearts, Spades, Clubs)
+[   ] - No card found
+
+HOW TO PLAY THE GAME [GUI MODE]
+
+>You can now use the mouse as your action in playing the game. To perform actions you may only click,
+ double click and drag the card/s in the game. Just perform the mouse action within the geometry of
+ the card/pile and do the necessary action to play.
+ACTIONS : 
+Drag (Motion):
+- Top card of the talon pile
+- Top cards of the corresponding foundation piles
+- Open cards of the corresponding tableau piles
+Double click :
+- Top card of the talon pile
+- Top cards of the corresponding tableau piles
+Click
+- Stock pile
+>To Draw, click on stock pile.
+>To move cards, press the card/cards you want to move. Then, drag the card/s to show motion. Lastly, release the cursor from dragging, on the region covered by your desired stack.
+POSSIBLE ACTIONS
+- Talon to Foundation[Can be automatically done by just double-clicking the card]
+- Talon to Tableau
+- Foundation to Tableau
+- Tableau to Foundation[Can be automatically done by just double-clicking the card]
+- Tableau within the Tableau
+
+>The game has five options for the player located at the menu bar.
+OPTIONS:
+Under Menu
+New Game (Ctrl+N) : When called, It will redeal the cards and start a new game.
+Save Game (Ctrl+S) : When called, It will save the current state of the game with the filename corresponding to the inputted string(include the relative path in inputting the filename).
+Load Game (Ctrl+L) : When called, It will load a game state with the file corresponding to the inputted filename (include the relative path when inputting the filename).
+Under Other Option
+About : When called, It gives information about the program.
+Exit (Ctrl+E) : When called, it will exit the game. 
+
+The interface of the game is just the same as a normal solitaire.
+ADDITIONAL NOTES:
+-Input validation is implemented throughout the whole game, may it be in terminal or gui mode.
+-The creator suggest to save game states in the savefiles folder.
